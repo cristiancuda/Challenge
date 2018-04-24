@@ -4,7 +4,7 @@
 </head>
 <body>
 
-	<?php
+<?php
   require "simple_html_dom.php";
 
   $endpoint = $_GET["endpoint"]; //Gets endpoint parameter, and assigns it to $endpoint.
@@ -31,11 +31,11 @@
         $trueBool = "true";
       }
     }
-		echo '{';
+	  echo '{';
 	  echo '<br>';
 	  echo 'exists: ', $trueBool;
 	  echo '<br>';
 	  echo '}';
-  ?>
+?>
 </body>
 </html>
