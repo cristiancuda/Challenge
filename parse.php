@@ -5,7 +5,7 @@
 </head>
 <body>
 
-	<?php
+<?php
   require "simple_html_dom.php";
 
   $endpoint = $_GET["endpoint"]; //Gets endpoint parameter, and assigns it to $endpoint.
@@ -14,9 +14,9 @@
   $html = file_get_html('http://'.$endpoint); // Creating DOM from html file passed by url.
 	//Variable declarations.
   $arrayItem = array();
-	$arrayItem2 = array();
+  $arrayItem2 = array();
   $count = 0;
-	$count2 = 0;
+  $count2 = 0;
   //Looking into the DOM for (all) the tags that we obtained through $_GET["tag"], and storing those into an array.
 	foreach($html->find('//'.$tag) as $value){
 		$arrayItem[$count] = $value->innertext;
@@ -26,7 +26,8 @@
 	echo 'Array:  ';
 	echo json_encode($arrayItem);
 	//Printing with the required format.
-  echo '<pre>';
+        echo '<pre>';
+	
 	echo '{';
 	echo '<br>';
 	echo '  ' . $tag . ': [';
@@ -44,11 +45,10 @@
 	}
 
 	echo '  ' . ']';
-  echo '<br>';
+        echo '<br>';
 	echo '}';
-
+	
 	echo '</pre>';
-
-  ?>
+?>
 </body>
 </html>
