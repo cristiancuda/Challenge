@@ -11,14 +11,14 @@
     $arrayItem[$count] = $value->innertext;
     $count++;
   }
-  echo '{';
-  echo '  ' . $tag . ': [';
+  echo "{\n";
+  echo '  ' . $tag . ": [\n";
   foreach($arrayItem as $value){
-    echo '   {';
-    echo '    innerText: ' . $value;
-    echo '    innerHtml: ' . json_encode($value);
-    echo '   },';
+    echo "   {\n";
+    echo '    innerText: ' . strip_tags($value), "\n";
+    echo '    innerHtml: ' . json_encode($value), "\n";
+    echo "   },\n";
   }
-echo '  ' . ']';
+echo '  ' . "]\n";
 echo '}';
 ?>
