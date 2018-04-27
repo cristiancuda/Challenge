@@ -9,7 +9,6 @@
   $trueBool = "false";
   $count = 0;
   $tagArray = array();
-  $contentArray = array();
   //Looking into the DOM for (all) the tags that we obtained through $_GET["tag"], and storing those into an array.
   foreach($html->find('//'.$tag) as $value){
     $tagArray[$count] = $value->innertext;
