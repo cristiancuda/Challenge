@@ -18,7 +18,7 @@
   foreach($html->find('//'.$tag) as $value){
 	  $arrayItem[$count] = $value->innertext;
 	  $count++;
-	}
+  }
   //Printing the array (Testing purposes)
   echo 'Array:  ';
   echo json_encode($arrayItem);
@@ -37,7 +37,7 @@
 	  echo '<br>';
 	  echo '   },';
 	  echo '<br>';
-	  }
+  }
   echo '  ' . ']';
   echo '<br>';
   echo '}';
