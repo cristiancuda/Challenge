@@ -22,7 +22,7 @@
       $trueBool = "true";
     }
   }
-  echo '{';
-  echo 'exists: ', json_encode($trueBool);
+  echo "{\n";
+  echo 'exists: ', json_encode($trueBool), "\n";
   echo '}';
 ?>
