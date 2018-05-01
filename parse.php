@@ -8,17 +8,10 @@
   $arrayItem = array();
   $count = 0;
   foreach($html->find('//'.$tag) as $value){
-    $arrayItem[$count] = $value->innertext;
+    $arrayItem[$count]->innerText = strip_tags($value);
+    $arrayItem[$count]->innerHtml = $value->innertext;
     $count++;
   }
-  echo "{\n";
-  echo '  ' . $tag . ": [\n";
-  foreach($arrayItem as $value){
-    echo "   {\n";
-    echo '    innerText: ' . strip_tags($value), "\n";
-    echo '    innerHtml: ' . json_encode($value), "\n";
-    echo "   },\n";
-  }
-echo '  ' . "]\n";
-echo '}';
+  $myJSON = json_encode($arrayItem);
+  echo ($myJSON);
 ?>
