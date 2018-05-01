@@ -6,7 +6,7 @@
   $content = $_GET["content"];
   $html = file_get_html('http://'.$endpoint); // Creating DOM from html file passed by url.
   //Variable declarations.
-  $trueBool = "false";
+  $trueBool->exists = "false";
   $count = 0;
   $tagArray = array();
   //Looking into the DOM for (all) the tags that we obtained through $_GET["tag"], and storing those into an array.
@@ -18,10 +18,9 @@
     $stringBool = strpos($tagArray[$i], $content); //Finding the position of the first occurrence of a substring in a string (comparing each word by indices)
     if($stringBool !== false)
     {
-      $trueBool = "true";
+      $trueBool->exists = "true";
     }
   }
-  echo "{\n";
-  echo 'exists: ', json_encode($trueBool), "\n";
-  echo '}';
+	$myBool = json_encode($trueBool);
+	echo $myBool;
 ?>
