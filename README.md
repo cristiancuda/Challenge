@@ -9,3 +9,8 @@ Request signature: http://yourwebserver.com/parse?endpoint=www.anywebsite.com&ta
 In the hipothetical case that www.anywebsite.com has the text "Hello all" in a h1 tag, the output will be TRUE.
 
 <h3>Contentpush.php</h3> Does the same thing as content.php, but utilizes the method array_push to populate the array.
+
+Live Demo:
+http://cristiancuda.com/parse.php?endpoint=www.github.com&tag=p
+
+http://cristiancuda.com/contains.php?endpoint=www.github.com&tag=h1&content=Built%20for%20developers
